@@ -1,6 +1,4 @@
 package classes;
-
-
 //tests
 public class main {
 
@@ -16,7 +14,6 @@ public class main {
         BinaryTreeNode<Integer> b6 = new BinaryTreeNode<>(19);
         BinaryTreeNode<Integer> b7 = new BinaryTreeNode<>(25);
         BinaryTreeNode<Integer> bTest = new BinaryTreeNode<>(100);
-        /*
         bt.setRoot(new BinaryTreeNode<>(10));
         bt.getRoot().addLeftChild(b2);
         bt.getRoot().addRightChild(b3);
@@ -25,21 +22,9 @@ public class main {
         b3.addLeftChild(b6);
         b3.addRightChild(b7);
         b7.addRightChild(bTest);
-        */
 
-
-        BinarySearchTree<Integer> searchTree= new BinarySearchTree<>();
-        searchTree.insert(b2.getElement());
-        searchTree.insert(b3.getElement());
-        searchTree.insert(b4.getElement());
-        searchTree.insert(b5.getElement());
-        searchTree.insert(b6.getElement());
-        searchTree.insert(b7.getElement());
         BinaryTreePrint print = new BinaryTreePrint();
-        print.printTree(searchTree.getRoot());
-        System.out.println();
-        searchTree.removeElement(11);
-        print.printTree(searchTree.getRoot());
+        print.printTree(bt.getRoot());
         System.out.println();
         System.out.println(bt.inOrder());
         System.out.println();
@@ -47,6 +32,6 @@ public class main {
         System.out.println();
         System.out.println(bt.postOrder());
         System.out.println();
-       // System.out.println(bt.height()); //todo height not stop if it is empty
+        System.out.println(bt.height());
     }
 }
