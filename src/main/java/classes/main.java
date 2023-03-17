@@ -27,11 +27,18 @@ public class main {
         print.printTree(bt.getRoot());
         System.out.println();
         System.out.println(bt.inOrder());
-        System.out.println();
+        System.out.println("<<<<PRE ORDER TRAVERSAL>>>>");
         System.out.println(bt.preOrder());
-        System.out.println();
+        System.out.println("<<<<POST ORDER TRAVERSAL>>>>");
         System.out.println(bt.postOrder());
         System.out.println();
+        System.out.println(bt.levelOrder());
+        System.out.println();
         System.out.println(bt.height());
+        System.out.println();
+        System.out.println(bt.size());
+        System.out.println("<<<<size and isEmpty for empty BinaryTree>>>>");
+        System.out.println(emptyTree.size());
+        System.out.println(emptyTree.isEmpty());
     }
 }
