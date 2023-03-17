@@ -19,7 +19,21 @@ class BinaryTreeTest {
         bt.getRoot().getRightChild().addLeftChild(b3);
         bt.getRoot().getRightChild().addRightChild(b4);
         bt.getRoot().getRightChild().getRightChild().addRightChild(b5);
-        assertTrue(bt.contains(20));
+        assertTrue(bt.contains(57));
+    }
+
+    @Test
+    public void BT_sizeOfFive_five(){
+        BinaryTreeNode<Integer> b2 = new BinaryTreeNode<>(10);
+        BinaryTreeNode<Integer> b3 = new BinaryTreeNode<>(5);
+        BinaryTreeNode<Integer> b4 = new BinaryTreeNode<>(20);
+        BinaryTreeNode<Integer> b5 = new BinaryTreeNode<>(57);
+        bt.setRoot(new BinaryTreeNode<>(1));
+        bt.getRoot().addRightChild(b2);
+        bt.getRoot().getRightChild().addLeftChild(b3);
+        bt.getRoot().getRightChild().addRightChild(b4);
+        bt.getRoot().getRightChild().getRightChild().addRightChild(b5);
+        assertEquals(5,bt.size());
     }
 
     @Test

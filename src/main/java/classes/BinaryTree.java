@@ -8,10 +8,11 @@ import java.util.Stack;
 public class BinaryTree<E extends Comparable<E>>{
 
     private BinaryTreeNode<E> root;
-
+    private int size;
 
     public BinaryTree() {
         root = null;
+        size = 0;
     }
 
     public BinaryTreeNode<E> getRoot(){
@@ -20,10 +21,11 @@ public class BinaryTree<E extends Comparable<E>>{
 
     public void setRoot(BinaryTreeNode<E> root){
         this.root = root;
+        size++;
     }
 
     public boolean isEmpty(){
-        if(size() == 0){
+        if(size == 0){
             return true;
         }
         return false;
