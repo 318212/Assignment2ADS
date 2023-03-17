@@ -24,14 +24,14 @@ public class BinaryTree<E extends Comparable<E>>{
         size++;
     }
 
-    public boolean isEmpty(){
-        if(size == 0){
-            return true;
-        }
-        return false;
+    public boolean isEmpty() {
+        return this.root == null;
     }
 
     public int size(){
+        if(isEmpty()){
+            return 0;
+        }
         return inOrder().size();
     }
 
