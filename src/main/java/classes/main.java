@@ -1,7 +1,5 @@
 package classes;
 
-import java.util.ArrayList;
-import java.util.List;
 
 //tests
 public class main {
@@ -41,7 +39,6 @@ public class main {
         print.printTree(searchTree.getRoot());
         System.out.println();
         searchTree.removeElement(11);
-
         print.printTree(searchTree.getRoot());
         System.out.println();
         System.out.println(bt.inOrder());
