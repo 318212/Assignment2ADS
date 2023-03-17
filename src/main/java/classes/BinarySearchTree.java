@@ -104,5 +104,17 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
 
         return false;
     }
+    public E findMin() {
+        if (getRoot() == null) {
+            return null;
+        }
+
+        BinaryTreeNode<E> node = getRoot();
+        while (node.getLeftChild() != null) {
+            node = node.getLeftChild();
+        }
+
+        return node.getElement();
+    }
 
 }
