@@ -1,4 +1,8 @@
 package classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //tests
 public class main {
 
@@ -14,17 +18,26 @@ public class main {
         BinaryTreeNode<Integer> b6 = new BinaryTreeNode<>(19);
         BinaryTreeNode<Integer> b7 = new BinaryTreeNode<>(25);
         BinaryTreeNode<Integer> bTest = new BinaryTreeNode<>(100);
-        bt.setRoot(new BinaryTreeNode<>(10));
+/*        bt.setRoot(new BinaryTreeNode<>(10));
         bt.getRoot().addLeftChild(b2);
         bt.getRoot().addRightChild(b3);
         b2.addLeftChild(b4);
         b2.addRightChild(b5);
         b3.addLeftChild(b6);
         b3.addRightChild(b7);
-        b7.addRightChild(bTest);
-
+        b7.addRightChild(bTest);*/
+        BinarySearchTree<Integer> searchTree= new BinarySearchTree<>();
+        searchTree.insert(b2.getElement());
+        searchTree.insert(b3.getElement());
+        searchTree.insert(b4.getElement());
+        searchTree.insert(b5.getElement());
+        searchTree.insert(b6.getElement());
+        searchTree.insert(b7.getElement());
         BinaryTreePrint print = new BinaryTreePrint();
-        print.printTree(bt.getRoot());
+        print.printTree(searchTree.getRoot());
+        System.out.println();
+        searchTree.removeElement(11);
+        print.printTree(searchTree.getRoot());
         System.out.println();
         System.out.println(bt.inOrder());
         System.out.println();
@@ -32,6 +45,6 @@ public class main {
         System.out.println();
         System.out.println(bt.postOrder());
         System.out.println();
-        System.out.println(bt.height());
+       // System.out.println(bt.height()); //todo heigth not stop if it is empty
     }
 }
