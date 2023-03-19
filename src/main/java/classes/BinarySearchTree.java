@@ -127,5 +127,8 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         }
         return node.getElement();
     }
+    public boolean contains(E element) {
+      return super.contains(element);
+    }
 
 }
