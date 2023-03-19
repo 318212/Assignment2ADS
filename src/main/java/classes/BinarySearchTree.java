@@ -117,4 +117,15 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         return node.getElement();
     }
 
+    public E findMax(){
+        if (getRoot()==null){
+            return null;
+        }
+        BinaryTreeNode<E> node = getRoot();
+        while (node.getRightChild()!= null){
+            node= node.getRightChild();
+        }
+        return node.getElement();
+    }
+
 }

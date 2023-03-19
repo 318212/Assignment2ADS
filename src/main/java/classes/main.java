@@ -51,6 +51,24 @@ public class main {
         System.out.println("<<<<size and isEmpty for empty BinaryTree>>>>");
         System.out.println(emptyTree.size());
         System.out.println(emptyTree.isEmpty());
+        BinarySearchTree<Integer> searchTree= new BinarySearchTree<>();
+        searchTree.insert(b2.getElement());
+        searchTree.insert(b3.getElement());
+        searchTree.insert(b4.getElement());
+        searchTree.insert(b5.getElement());
+        searchTree.insert(b6.getElement());
+        searchTree.insert(b7.getElement());
+        searchTree.insert(bTest.getElement());
+        System.out.println("<<<<<Find max");
+        System.out.println(searchTree.findMax());
+        System.out.println("<<<<<Find min");
+        System.out.println(searchTree.findMin());
+        print.printTree(searchTree.getRoot());
+        System.out.println(" ");
+        System.out.print("Remove 20");
+
+        searchTree.removeElement(20);
+        print.printTree(searchTree.getRoot());
 
     }
 }
