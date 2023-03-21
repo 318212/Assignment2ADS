@@ -129,8 +129,9 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         }
         return node.getElement();
     }
-    public boolean contains(E element) {
-        return super.contains(element);
+    
+ public boolean contains(E element) {
+      return super.contains(element);
     }
 
     public void reBalance() {
@@ -159,8 +160,4 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         addSubtree(elements, start, mid - 1, child);
         addSubtree(elements, mid + 1, end, child);
     }
-
-
-
-
 }

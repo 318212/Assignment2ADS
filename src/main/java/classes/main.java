@@ -73,7 +73,7 @@ public class main {
         System.out.println(" ");
         System.out.println(" ");
 
-        searchTree.reBalance();
+        searchTree.rebalance();
         print.printTree(searchTree.getRoot());
 
     }
