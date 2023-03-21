@@ -129,30 +129,29 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         }
         return node.getElement();
     }
-
-    public boolean contains(E element){
-        return super.contains(element);
+    
+ public boolean contains(E element) {
+      return super.contains(element);
     }
 
-    public void rebalance() {
+    public void reBalance() {
         if (getRoot()==null||size()<2){
             return;
         }
         ArrayList<E> elements = inOrder();
-        setRoot(new BinaryTreeNode<>(elements.get(elements.size() / 2)));
+        setRoot(new BinaryTreeNode<E>(elements.get(elements.size() / 2)));
 
         addSubtree(elements, 0, elements.size() / 2 - 1, getRoot());
         addSubtree(elements, elements.size() / 2 + 1, elements.size() - 1, getRoot());
     }
 
-    //helper method for re-balancing feature
     private void addSubtree(ArrayList<E> elements, int start, int end, BinaryTreeNode<E> parent) {
         if (start > end) {
             return;
         }
 
         int mid = (start + end) / 2;
-        BinaryTreeNode<E> child = new BinaryTreeNode<>(elements.get(mid));
+        BinaryTreeNode<E> child = new BinaryTreeNode<E>(elements.get(mid));
         if (child.getElement().compareTo(parent.getElement()) < 0) {
             parent.addLeftChild(child);
         } else {
@@ -161,5 +160,4 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         addSubtree(elements, start, mid - 1, child);
         addSubtree(elements, mid + 1, end, child);
     }
-
 }
