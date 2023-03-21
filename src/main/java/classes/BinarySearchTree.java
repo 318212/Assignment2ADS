@@ -1,5 +1,8 @@
 package classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
 
     public BinarySearchTree() {
@@ -126,6 +129,14 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
             node= node.getRightChild();
         }
         return node.getElement();
+    }
+
+    public void rebalance(){
+
+        //traverse through the tree , store the elements in ascending order (IN-ORDER traversal)
+
+
+
     }
 
 }
