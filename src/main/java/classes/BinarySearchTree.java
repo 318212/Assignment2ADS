@@ -139,7 +139,7 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
             return;
         }
         ArrayList<E> elements = inOrder();
-        setRoot(new BinaryTreeNode<E>(elements.get(elements.size() / 2)));
+        setRoot(new BinaryTreeNode<>(elements.get(elements.size() / 2)));
 
         addSubtree(elements, 0, elements.size() / 2 - 1, getRoot());
         addSubtree(elements, elements.size() / 2 + 1, elements.size() - 1, getRoot());

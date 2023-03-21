@@ -108,4 +108,29 @@ class BinarySearchTreeTest {
         int maxValueFromTheTree = bst.findMax();
         assertEquals(25, maxValueFromTheTree);
     }
+
+    @Test
+    public void visualRepresentationOfRebalance_Null(){
+        bst.insert(root.getElement());
+        bst.insert(b2.getElement());
+        bst.insert(b3.getElement());
+        bst.insert(b4.getElement());
+        bst.insert(b5.getElement());
+        bst.insert(b6.getElement());
+        bst.insert(b7.getElement());
+        print.printTree(bst.getRoot());
+        bst.rebalance();
+        System.out.println();
+        print.printTree(bst.getRoot());
+    }
+
+    @Test
+    public void rebalanceOnNotBalanceableTree_Null(){
+        bst.insert(root.getElement());
+        bst.insert(b2.getElement());
+        print.printTree(bst.getRoot());
+        System.out.println();
+        bst.rebalance();
+        print.printTree(bst.getRoot());
+    }
 }
