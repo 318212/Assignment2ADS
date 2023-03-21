@@ -130,13 +130,4 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         }
         return node.getElement();
     }
-
-    public void rebalance(){
-
-        //traverse through the tree , store the elements in ascending order (IN-ORDER traversal)
-
-
-
-    }
-
 }
