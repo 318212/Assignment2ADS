@@ -134,7 +134,7 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
       return super.contains(element);
     }
 
-    public void reBalance() {
+    public void rebalance() {
         if (getRoot()==null||size()<2){
             return;
         }

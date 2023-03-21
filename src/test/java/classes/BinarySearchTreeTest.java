@@ -119,5 +119,9 @@ class BinarySearchTreeTest {
         bst.insert(b6.getElement());
         bst.insert(b7.getElement());
         print.printTree(bst.getRoot());
+        bst.rebalance();
+        System.out.println();
+        print.printTree(bst.getRoot());
+
     }
 }
