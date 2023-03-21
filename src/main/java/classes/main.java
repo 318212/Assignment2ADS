@@ -67,7 +67,13 @@ public class main {
         System.out.println(" ");
         System.out.print("Remove 20");
 
-        searchTree.removeElement(20);
+        print.printTree(searchTree.getRoot());
+        System.out.println("  ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+
+        searchTree.reBalance();
         print.printTree(searchTree.getRoot());
 
     }
